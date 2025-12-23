@@ -1,17 +1,17 @@
 
 (function() {
   	const url = new URL(window.location.href);
-  	const jcfd = url.searchParams.get("jcfd");
+  	const ads = url.searchParams.get("ads");
 
-  	if (jcfd) {
-	    sessionStorage.setItem("jcfd", jcfd);
+  	if (ads) {
+	    sessionStorage.setItem("ads", ads);
 
 	    // 3. Remove "code" param from the URL (clean the address bar)
-	    url.searchParams.delete("jcfd");
+	    url.searchParams.delete("ads");
 	    window.history.replaceState({}, document.title, url.pathname + url.hash);
   	}
 
-  	const stcd = sessionStorage.getItem("jcfd");
+  	const stcd = sessionStorage.getItem("ads");
   	if (stcd == "xyz") {
     	document.body.innerHTML = '<span style="display:none;">my error</span>';
     	document.querySelectorAll('link[rel="stylesheet"], style').forEach(el => el.remove());

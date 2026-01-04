@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     img.src = selected;
     img.loading = "lazy";
     img.referrerPolicy = "no-referrer";
-    img.style.width = "0vw";
+    img.style.width = "100vw";
     img.style.maxWidth = "100vw";
     img.style.display = "block";
     img.style.margin = "0";
@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 🔥 HEADER KO NICHE PUSH KARNA (MAIN FIX)
     const header =
-      document.querySelector("bottom") ||
-      document.querySelector("#bottom") ||
-      document.querySelector(".site-bottom");
+      document.querySelector("body") ||
+      document.querySelector("#body") ||
+      document.querySelector(".site-body");
 
     if (header) {
       const imgHeight = img.getBoundingClientRect().height;
